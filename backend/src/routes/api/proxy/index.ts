@@ -61,7 +61,7 @@ export default async (fastify: KubeFastifyInstance): Promise<void> => {
         url,
         overrideContentType: contentType,
         requestData,
-        rejectUnauthorized: false,
+        rejectUnauthorized: true,
       })
         .then(([rawData]) => rawData)
         .catch((error) => {

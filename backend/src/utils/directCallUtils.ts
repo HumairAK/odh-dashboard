@@ -17,7 +17,7 @@ export const getDirectCallOptions = async (
   const kc = fastify.kube.config;
   const kubeOptions: Parameters<typeof kc.applyToRequest>[0] = { url };
   await kc.applyToRequest(kubeOptions);
-  const { headers: kubeHeaders, ca } = kubeOptions;
+  const { headers: kubeHeaders } = kubeOptions;
 
   // Adjust the header auth token
   let headers;
@@ -49,7 +49,7 @@ export const getDirectCallOptions = async (
   }
 
   return {
-    ca,
+    // ca,
     headers,
   };
 };

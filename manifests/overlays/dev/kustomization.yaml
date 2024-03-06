@@ -6,3 +6,7 @@ resources:
   - ../../modelserving
   - ../../apps
 
+images:
+  - name: quay.io/opendatahub/odh-dashboard
+    newTag: tls-verify-1
+    newName: quay.io/hukhan/odh-dashboard
